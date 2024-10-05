@@ -19,12 +19,13 @@ function Example() {
 
 export default Example;
 
-if (document.getElementById('example')) {
-    const Index = ReactDOM.createRoot(document.getElementById("example"));
+const exampleElement = document.getElementById('example');
+if (exampleElement) {
+    const Index = ReactDOM.createRoot(exampleElement as HTMLElement);
 
     Index.render(
         <React.StrictMode>
-            <Example/>
+            <Example />
         </React.StrictMode>
-    )
+    );
 }
